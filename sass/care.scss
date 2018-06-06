@@ -1,0 +1,98 @@
+@function pr($p) {
+    @return $p/32+rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    li {
+        width: 100%;
+        .user {
+            width: 100%;
+            height: pr(70);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .left {
+                margin-left: pr(15);
+                display: flex;
+                // justify-content: space-between;
+                align-items: center;
+                img {
+                    width: pr(40);
+                    border-radius: 50%;
+                    margin-right: pr(15);
+                }
+                span {
+                    color: #666;
+                }
+            }
+            .right {
+                color: #999;
+                font-size: pr(12);
+                margin-right: pr(15);
+            }
+        }
+        .title {
+            text-align: center;
+            font-size: pr(16);
+            color: #999;
+            margin-bottom: pr(15);
+        }
+        .img {
+            width: 100%;
+            padding: 0 pr(10);
+            img {
+                width: 100%;
+            }
+        }
+        .juchi {
+            position: relative;
+            .bottom {
+                position: absolute;
+                bottom: pr(2);
+                .box {
+                    float: left;
+                    width: 0;
+                    height: 0;
+                    border-left: (10-20/32)/40+rem solid transparent;
+                    border-right:  (10-20/32)/40+rem solid transparent;
+                    border-bottom: pr(8) solid #fff;
+                }
+            }
+        }
+        .content {
+            p {
+                padding:pr(5) pr(15);
+                font-size: pr(14);
+            }
+            
+        }
+        .info {
+            padding:pr(10) pr(15);
+            font-size: pr(16);
+            color: #999;
+            img {
+                width: pr(15);
+            }
+        }
+        .control {
+            padding:0 pr(15);
+            font-size: pr(16);
+            color: #999;
+            span {
+                font-size: pr(22);
+            }
+        }
+        
+    }
+}

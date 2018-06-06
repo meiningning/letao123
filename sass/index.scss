@@ -1,0 +1,98 @@
+@function pr($p) {
+    @return $p/32+rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+a {
+    text-decoration: none;
+}
+.footer {
+    width: 100%;
+    flex-basis: pr(50);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ccc;
+    a {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0.5;
+        &:nth-child(3) {
+            opacity: 1;
+           img {
+               height: pr(30);
+           } 
+        }
+        img {
+            height: pr(20);
+        }
+        span {
+            font-size: pr(14);
+            color: #336162;
+        }
+    }
+    a.active {
+        opacity: 1;
+    }
+    
+}
+.contain {
+    flex: 1;
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        padding-top: pr(50);
+        .swiper-wrapper{
+            .swiper-slide {
+                background-color: rosybrown;
+            }
+        }
+    }
+    .swiper-pagination {
+        position: fixed;
+        width: 100%;
+        height: pr(50);
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        span {
+            width: 30%;
+            height: 100%;
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #fff;
+            &.swiper-pagination-bullet-active {
+                border-bottom: 2px solid yellowgreen;
+            }
+            &.swiper-pagination-bullet{
+                margin:0;
+            }
+            &:nth-child(1)::before {
+                content: "关注";
+                display: block;
+                font-size: pr(20);
+            }
+            &:nth-child(2)::before {
+                content: "订阅";
+                display: block;
+                font-size: pr(20);
+            }
+        }
+    }
+}

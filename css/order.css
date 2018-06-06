@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+.list {
+  width: 100%;
+}
+.list .row {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+.list .row .box {
+  display: flex;
+  margin-left: 0.46875rem;
+}
+.list .row .box img {
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+.list .row .box .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 0.3125rem;
+}
+.list .row .box p {
+  font-size: 0.5rem;
+}
+.list .row .box p:nth-child(1) {
+  color: #666;
+}
+.list .row .box p:nth-child(2) {
+  color: #999;
+}
+.list .row button {
+  margin-right: 0.46875rem;
+  width: 1.5625rem;
+  height: 0.8125rem;
+  font-size: 0.4375rem;
+  border: 0.03125rem solid yellowgreen;
+  border-radius: 0.40625rem;
+  background: #fff;
+  color: yellowgreen;
+}
+
+/*# sourceMappingURL=order.css.map */

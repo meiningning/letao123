@@ -1,0 +1,56 @@
+@function pr($i){
+    @return $i/32+rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+}
+.list {
+    width: 100%;
+    .row {
+        width: 100%;
+        height: pr(80) ;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+        .box {
+            display: flex;
+            margin-left: pr(15);
+            img {
+                width: pr(50);
+                height: pr(50);
+            }
+            .title {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin-left: pr(10);
+            }
+           p {
+               font-size: pr(16);
+               &:nth-child(1) {
+                   color: #666;
+               }
+               &:nth-child(2) {
+                color: #999;
+               }
+            }
+       }
+       button {
+            margin-right: pr(15);
+            width: pr(50);
+            height: pr(26);
+            font-size: pr(14);
+            border: pr(1) solid yellowgreen;
+            border-radius: pr(13);
+            background: #fff;
+            color: yellowgreen;
+       }
+    }
+}
